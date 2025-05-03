@@ -31,7 +31,7 @@ There are a few ways to make your local network aware of the cache server.
 ## `UPSTREAM_DNS`
 This allows you to choose one or more IP addresses for upstream DNS resolution if a name is not matched by the `lancache-dns` service (e.g. non-cached services, local hostname resolution).
 
-Whichever resolver you choose depends on your network's requirements - if you don't need to provide internal DNS names, you can point `UPSTREAM_DNS` directly to an external resolver (the default is Google's DNS at `8.8.8.8`).
+Whichever resolver you choose depends on your network's requirements - if you don't need to provide internal DNS names, you can point `UPSTREAM_DNS` directly to an external resolver (the default is cloudflare DNS at `1.1.1.1`).
 
 If you run internal services on your network, you can set `UPSTREAM_DNS` to be your internal DNS resolver(s), semicolon separated (e.g. `192.168.0.1; 192.168.0.2`).
 
@@ -41,6 +41,7 @@ If you run internal services on your network, you can set `UPSTREAM_DNS` to be y
   - `8.8.4.4`
 - Cloudflare
   - `1.1.1.1`
+  - `1.0.0.1`
 - OpenDNS
   - `208.67.222.222`
   - `208.67.220.220`
